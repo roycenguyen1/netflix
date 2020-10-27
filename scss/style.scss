@@ -78,8 +78,10 @@ body {
   z-index: 2;
 
   .logo {
+    display: inline-block;
+    width: 170px;
     img {
-      width: 45%;
+      width: 100%;
     }
   }
 
@@ -219,7 +221,7 @@ body {
           position: absolute;
           background: white;
           height: 2px;
-          width: 28px;
+          width: 100%;
 
           &:nth-child(1) {
             top: 13px;
@@ -317,3 +319,5 @@ body {
     }
   }
 }
+
+@import "mobile";

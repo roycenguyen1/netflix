@@ -130,8 +130,13 @@ body {
   z-index: 2;
 }
 
+.header .logo {
+  display: inline-block;
+  width: 170px;
+}
+
 .header .logo img {
-  width: 45%;
+  width: 100%;
 }
 
 .header a {
@@ -310,7 +315,7 @@ body {
   position: absolute;
   background: white;
   height: 2px;
-  width: 28px;
+  width: 100%;
 }
 
 .questions .question-title .btn-open .line:nth-child(1) {
@@ -420,4 +425,119 @@ body {
 
 .footer .row-3:hover ul {
   display: block;
+}
+
+@media screen and (max-width: 800px) {
+  .textinput {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .textinput input {
+    width: 95%;
+    height: 45px;
+  }
+  .textinput input::-webkit-input-placeholder {
+    font-size: 1rem;
+  }
+  .textinput input:-ms-input-placeholder {
+    font-size: 1rem;
+  }
+  .textinput input::-ms-input-placeholder {
+    font-size: 1rem;
+  }
+  .textinput input::placeholder {
+    font-size: 1rem;
+  }
+  .textinput .input-btn {
+    height: 45px;
+    margin: 1rem 0;
+  }
+  .textinput .input-btn a {
+    font-size: 1.1rem;
+  }
+  .box > div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    width: 98%;
+  }
+  .box > div > div {
+    text-align: center;
+  }
+  .box > div .box-content {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin: 2rem 0;
+  }
+  .box > div .box-content h1 {
+    font-size: 1.7rem;
+  }
+  .box > div .box-content p {
+    font-size: 1.2rem;
+  }
+  .questions {
+    padding: 4em 0;
+  }
+  .questions-header {
+    font-size: 0.8rem;
+  }
+  .questions > div:nth-child(2) {
+    width: 100%;
+  }
+  .questions .question-answer {
+    font-size: 1.1rem;
+  }
+  .questions .question-title {
+    font-size: 0.8rem;
+  }
+  .questions .question-title .btn-open {
+    width: 20px;
+  }
+  .questions > div:nth-child(3) {
+    width: 100%;
+  }
+  .questions > div:nth-child(3) p {
+    font-size: 1.1rem;
+  }
+  .showcase {
+    height: 90vh;
+    -webkit-box-shadow: inset 50px 30px 150px rgba(0, 0, 0, 0.4), inset -50px -30px 150px rgba(0, 0, 0, 0.7);
+            box-shadow: inset 50px 30px 150px rgba(0, 0, 0, 0.4), inset -50px -30px 150px rgba(0, 0, 0, 0.7);
+  }
+  .showcase .showcase-inner {
+    width: 90%;
+  }
+  .showcase .showcase-inner h1 {
+    font-size: 2rem;
+    width: 100%;
+  }
+  .showcase .showcase-inner h2 {
+    font-size: 1.2rem;
+    margin-top: 0.3rem;
+  }
+  .showcase .showcase-inner p {
+    margin: 0.5rem 0 0.2rem 0;
+    font-size: 1rem;
+  }
+  .footer {
+    padding: 2em 0;
+    font-size: 1rem;
+  }
+  .footer .row-2 {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header .logo {
+    width: 100px;
+  }
+  .header a {
+    padding: 0.4rem 1rem;
+  }
 }
