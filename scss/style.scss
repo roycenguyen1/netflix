@@ -1,4 +1,4 @@
-$primary-color: #e50914;
+@import "config";
 
 * {
   margin: 0;
@@ -12,33 +12,55 @@ body {
   line-height: 1.5;
 }
 
-ul {
-  list-style: none;
+// Text Input
+.textinput {
+  @include flexCenter;
+  text-align: center;
+
+  input {
+    height: 70px;
+    width: 50%;
+    padding: 0 1rem;
+
+    &::placeholder {
+      font-size: 1.2rem;
+    }
+  }
+
+  .input-btn {
+    @include flexCenter;
+    height: 70px;
+    padding: 0 1rem;
+
+    a {
+      display: inline-block;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 1.65rem;
+      font-weight: 500;
+    }
+
+    i {
+      margin-left: 0.5rem;
+      font-size: 1.7rem;
+    }
+  }
 }
 
-a {
-  text-decoration: none;
-}
-
-.btn {
-  background: $primary-color;
-  color: #fff;
-}
-
+// Header
 .header {
+  @include flexCenter(space-between);
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.5rem 3rem;
+  padding: 2rem 3rem;
   z-index: 2;
 
   .logo {
     img {
-      width: 43%;
+      width: 45%;
     }
   }
 
@@ -48,15 +70,14 @@ a {
   }
 }
 
+// Showcase
 .showcase {
+  @include flexCenter;
+  text-align: center;
+  flex-direction: column;
   color: #fff;
   background: rgba(0, 0, 0, 0.5);
-  height: 95vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  height: 100vh;
   position: relative;
   box-shadow: inset 120px 100px 250px rgba(0, 0, 0, 0.7),
     inset -120px -100px 250px rgba(0, 0, 0, 0.7);
@@ -71,11 +92,204 @@ a {
   }
 
   .showcase-inner {
-    width: 70%;
+    width: 80%;
     margin: auto;
 
     h1 {
-      font-size: 3rem;
+      font-size: 3.5rem;
+      line-height: 1.2;
+      width: 60%;
+      margin: auto;
+    }
+
+    h2 {
+      margin-top: 1rem;
+      font-size: 1.9rem;
+      font-weight: 300;
+    }
+
+    p {
+      margin: 2rem 0 1.5rem 0;
+      font-size: 1.4rem;
+    }
+  }
+}
+
+// Boxes
+.box {
+  @include boxes;
+
+  & > div {
+    @include flexCenter;
+    justify-content: space-between;
+    width: 85%;
+    margin: auto;
+    padding: 6em 0;
+
+    .box-content {
+      flex-basis: 50%;
+
+      h1 {
+        font-size: 3.5rem;
+        line-height: 1.3;
+      }
+
+      p {
+        margin-top: 1rem;
+        font-size: 1.8rem;
+        line-height: 1.3;
+      }
+    }
+
+    img {
+      width: 80%;
+    }
+  }
+}
+
+// Questions
+.questions {
+  @include boxes;
+  @include flexCenter;
+  flex-direction: column;
+  padding: 4em;
+
+  &-header {
+    font-size: 1.7rem;
+    margin-bottom: 2rem;
+  }
+
+  & > div:nth-child(2) {
+    width: 70%;
+  }
+
+  .question {
+    background: #2e2e2e;
+    margin: 0.65rem 0;
+    padding: 1.2rem 2rem;
+
+    &-answer {
+      display: none;
+    }
+
+    &-title {
+      font-size: 1.25rem;
+      @include flexCenter(space-between);
+
+      h2 {
+        font-weight: 100;
+      }
+      .btn-open {
+        position: relative;
+        width: 28px;
+        height: 28px;
+        right: 10px;
+        cursor: pointer;
+
+        .line {
+          position: absolute;
+          background: white;
+          height: 2px;
+          width: 28px;
+
+          &:nth-child(1) {
+            top: 13px;
+            transform: rotate(90deg);
+          }
+          &:nth-child(2) {
+            top: 13px;
+          }
+        }
+
+        &.show {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+
+  & > div:nth-child(3) {
+    margin-top: 2rem;
+    width: 80%;
+    text-align: center;
+
+    p {
+      font-size: 1.4rem;
+      margin: 1rem 0;
+    }
+  }
+}
+
+// Footer
+.footer {
+  @include boxes;
+  padding: 5em 0;
+  font-size: 1.1rem;
+  color: #777;
+
+  & > div {
+    width: 80%;
+    margin: auto;
+    & > div {
+      margin: 2rem 0;
+    }
+  }
+
+  a {
+    color: #777;
+  }
+
+  .row-2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    & > div {
+      display: flex;
+      flex-direction: column;
+
+      a {
+        margin: 0.3rem 0;
+      }
+    }
+  }
+
+  .row-3 {
+    .footer-btn {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 160px;
+      border: 2px solid #444;
+      border-radius: 4px;
+      padding: 1rem 1.4rem;
+      cursor: pointer;
+
+      &:active {
+        border-color: #cecece;
+      }
+    }
+
+    ul {
+      position: absolute;
+      display: none;
+      width: 160px;
+      text-align: center;
+
+      li {
+        border: 1px solid #777;
+
+        &:hover {
+          background: #1f79ff;
+          a {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+
+  &.active {
+    ul {
+      display: block;
     }
   }
 }

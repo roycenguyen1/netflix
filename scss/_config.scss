@@ -1,0 +1,34 @@
+$primary-color: #e50914;
+
+@mixin flexCenter($justify: center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: center;
+}
+
+@mixin boxes {
+  background: #0a0a0a;
+  color: #fff;
+  border-top: 8px solid #222;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  background: $primary-color;
+  color: #fff;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
