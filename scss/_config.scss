@@ -23,6 +23,11 @@ a {
 .btn {
   background: $primary-color;
   color: #fff;
+  border-radius: 2px;
+
+  &:hover {
+    background: lighten($primary-color, 7);
+  }
 }
 
 .text-right {

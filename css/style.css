@@ -9,6 +9,11 @@ a {
 .btn {
   background: #e50914;
   color: #fff;
+  border-radius: 2px;
+}
+
+.btn:hover {
+  background: #f61c27;
 }
 
 .text-right {
@@ -58,6 +63,9 @@ body {
   height: 60px;
   width: 45%;
   padding: 0 1rem;
+  border-radius: 2px;
+  outline: none;
+  border: none;
 }
 
 .textinput input::-webkit-input-placeholder {
@@ -386,6 +394,10 @@ body {
   cursor: pointer;
 }
 
+.footer .row-3 .footer-btn:hover {
+  border-color: #cecece;
+}
+
 .footer .row-3 ul {
   position: absolute;
   display: none;
@@ -398,6 +410,7 @@ body {
 }
 
 .footer .row-3 ul li:hover {
+  border-color: #888;
   background: #1f79ff;
 }
 
@@ -405,10 +418,6 @@ body {
   color: #fff;
 }
 
-.footer.active ul {
+.footer .row-3:hover ul {
   display: block;
-}
-
-.footer.active .footer-btn {
-  border-color: #cecece;
 }

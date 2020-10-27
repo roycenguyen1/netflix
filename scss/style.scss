@@ -21,6 +21,9 @@ body {
     height: 60px;
     width: 45%;
     padding: 0 1rem;
+    border-radius: 2px;
+    outline: none;
+    border: none;
 
     &::-webkit-input-placeholder {
       font-size: 1.2rem;
@@ -284,6 +287,10 @@ body {
       border-radius: 4px;
       padding: 1rem 1.4rem;
       cursor: pointer;
+
+      &:hover {
+        border-color: #cecece;
+      }
     }
 
     ul {
@@ -296,6 +303,7 @@ body {
         border: 1px solid #777;
 
         &:hover {
+          border-color: #888;
           background: #1f79ff;
           a {
             color: #fff;
@@ -303,15 +311,9 @@ body {
         }
       }
     }
-  }
 
-  &.active {
-    ul {
+    &:hover ul {
       display: block;
-    }
-
-    .footer-btn {
-      border-color: #cecece;
     }
   }
 }
