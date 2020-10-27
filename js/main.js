@@ -4,19 +4,29 @@ footerBtn.addEventListener("click", function () {
   footer.classList.toggle("active");
 });
 
-const btnOpens = document.querySelectorAll(".btn-open");
-const answers = document.querySelectorAll(".question-answer");
 
-function selectItem(e) {
-  this.classList.toggle("show");
-  showAnswer();
-  // answers.forEach((answer) => answer.classList.toggle("reveal"));
+const questions = document.querySelectorAll('.question-title');
+const answers = document.querySelectorAll('.question-answer');
+const icons = document.querySelectorAll('.btn-open');
+
+function selectItem(e){
+  // removeRotate();
+  // removeShow();
+  const icon = document.querySelector(`#${this.id}-icon`);
+  icon.classList.toggle('rotate')
+  // icon.classList.add('rotate')
+  const answer = document.querySelector(`#${this.id}-content`);
+  answer.classList.toggle('show');
+  // answer.classList.add('show');
+  
 }
 
-function showAnswer() {
-  answers.forEach((answer) => answer.classList.toggle("reveal"));
+function removeRotate(){
+  icons.forEach(icon=> icon.classList.remove('rotate'))
+}
+function removeShow(){
+  answers.forEach(answer=> answer.classList.remove('show'))
 }
 
-btnOpens.forEach((btn) => {
-  btn.addEventListener("click", selectItem);
-});
+questions.forEach(question=> question.addEventListener('click', selectItem));
+

@@ -32,3 +32,11 @@ a {
 .text-left {
   text-align: left;
 }
+
+.rotate {
+  transform: rotate(-45deg);
+}
+
+.show {
+  display: block !important;
+}
