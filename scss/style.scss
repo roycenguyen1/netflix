@@ -26,23 +26,23 @@ body {
     border: none;
 
     &::-webkit-input-placeholder {
-      font-size: 1.2rem;
+      font-size: 1rem;
     }
 
     &::-moz-placeholder {
-      font-size: 1.2rem;
+      font-size: 1rem;
     }
 
     &:-ms-input-placeholder {
-      font-size: 1.2rem;
+      font-size: 1rem;
     }
 
     &::-ms-input-placeholder {
-      font-size: 1.2rem;
+      font-size: 1rem;
     }
 
     &::placeholder {
-      font-size: 1.2rem;
+      font-size: 1rem;
     }
   }
 
@@ -312,10 +312,6 @@ body {
           }
         }
       }
-    }
-
-    &:hover ul {
-      display: block;
     }
   }
 }

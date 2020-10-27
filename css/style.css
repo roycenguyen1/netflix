@@ -69,19 +69,19 @@ body {
 }
 
 .textinput input::-webkit-input-placeholder {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .textinput input:-ms-input-placeholder {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .textinput input::-ms-input-placeholder {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .textinput input::placeholder {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .textinput .input-btn {
@@ -423,10 +423,6 @@ body {
   color: #fff;
 }
 
-.footer .row-3:hover ul {
-  display: block;
-}
-
 @media screen and (max-width: 800px) {
   .textinput {
     -webkit-box-orient: vertical;
@@ -534,6 +530,9 @@ body {
 }
 
 @media screen and (max-width: 600px) {
+  .header {
+    padding: 2rem 1rem;
+  }
   .header .logo {
     width: 100px;
   }

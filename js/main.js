@@ -12,3 +12,9 @@ function selectItem(e){
 questions.forEach(question=> question.addEventListener('click', selectItem));
 
 
+const btnOpen = document.querySelector('.footer-btn');
+const ul = document.querySelector('.row-3 ul')
+
+btnOpen.addEventListener('click', function(){ 
+  ul.classList.toggle('show')
+});
