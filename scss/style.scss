@@ -262,10 +262,6 @@ body {
       border-radius: 4px;
       padding: 1rem 1.4rem;
       cursor: pointer;
-
-      &:active {
-        border-color: #cecece;
-      }
     }
 
     ul {
@@ -290,6 +286,10 @@ body {
   &.active {
     ul {
       display: block;
+    }
+
+    .footer-btn {
+      border-color: #cecece;
     }
   }
 }
